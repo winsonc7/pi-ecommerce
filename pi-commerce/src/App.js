@@ -4,6 +4,7 @@ import Navbar from './Components/Navbar/Navbar';
 import Cart from './Pages/Cart'
 import Profile from './Pages/Profile'
 import Search from './Pages/Search'
+import BobaHouse from './Pages/BobaHouse'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/cart' element={<Cart/>} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path='/bobahouse' element={<BobaHouse/>} />
         <Route path='/' element={<Search/>} />
       </Routes>
       </BrowserRouter>
