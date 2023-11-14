@@ -2,6 +2,8 @@ import React from 'react';
 import profile from '../Components/Assets/profile.png'
 import './Profile.css'
 
+/* Add username */
+
 const Profile = () => {
   return (
     <div className="profile-container">

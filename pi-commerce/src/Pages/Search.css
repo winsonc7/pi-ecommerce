@@ -3,16 +3,11 @@
   margin-left: 50px;
   text-align: center;
   padding: 20px;
+  font-size: 32px;
 }
 
 body {
   background-color: #ffeece; /* Set your desired background color */
-}
-
-/* Page title */
-h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
 }
 
 /* Search bar */

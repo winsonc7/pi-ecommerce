@@ -7,25 +7,25 @@ const all_product = [
   {
     id: 1,
     name: 'Coffee Boba',
-    image: p1, // Replace with the actual image path
+    image: p1,
     price: 0.26,
   },
   {
     id: 2,
     name: 'Mango Boba',
-    image: p2, // Replace with the actual image path
+    image: p2,
     price: 0.31,
   },
   {
     id: 3,
     name: 'Strawberry Boba',
-    image: p3, // Replace with the actual image path
+    image: p3,
     price: 0.31,
   },
   {
     id: 4,
     name: 'Brown Sugar Boba',
-    image: p4, // Replace with the actual image path
+    image: p4,
     price: 0.36,
   },
 ];
