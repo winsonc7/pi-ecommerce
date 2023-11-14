@@ -19,7 +19,11 @@ const BobaHouse = () => {
         <img src={product.image} alt={product.name} />
         <div>
           <h3>{product.name}</h3>
-          <p>${product.price.toFixed(2)}</p>
+          <p>{product.price.toFixed(2)} pi</p>
+          <div className="action-buttons">
+            <button className="add-button">Add to Cart</button>
+            <button className="remove-button">Remove</button>
+          </div>
         </div>
       </div>
     ))}

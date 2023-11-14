@@ -28,15 +28,42 @@
 .product-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .product-item {
-  width: 30%; /* Adjust the width to fit three items per row with some spacing */
-  margin: 1.5%; /* Adjust the margin for spacing between items */
+  width: 25%; /* Adjust the width to fit three items per row with some spacing */
+  margin: 2%; /* Adjust the margin for spacing between items */
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+  padding: 10px;
 }
 
 .product-item img {
   width: 100%;
-  height: 300px;
+  height:200px;
   object-fit: cover;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.add-button,
+.remove-button {
+  background-color: #ffffff;
+  color: rgb(243, 0, 0);
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.remove-button {
+  background-color: #ffffff;
 }
