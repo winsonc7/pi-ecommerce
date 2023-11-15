@@ -48,11 +48,13 @@
 .action-buttons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
 }
 
 .add-button,
-.remove-button {
+.remove-button,
+.item-count-box {
   background-color: #ffffff;
   color: rgb(243, 0, 0);
   padding: 8px 16px;
@@ -66,4 +68,13 @@
 
 .remove-button {
   background-color: #ffffff;
+}
+
+.item-count-box {
+  color: #333; /* Adjust text color */
+  height: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 15px; /* Add rounded corners */
+  display: flex;
+  align-items: center;
 }
