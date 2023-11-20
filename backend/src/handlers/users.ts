@@ -49,4 +49,19 @@ export default function mountUserEndpoints(router: Router) {
     req.session.currentUser = null;
     return res.status(200).json({ message: "User signed out" });
   });
+
+  // getting past orders 
+
+  router.get('/user/:userId/orders', async (req, res) => {
+    const userId = req.params.userId;
+    const orderCollection = req.app.locals.orderCollection;
+
+    try {
+      const orders = await orderCollection.find({ userId }).toArray();
+      return res.status(200).json(orders);
+    } catch (err) {
+      console.error(err);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+  });
 }
