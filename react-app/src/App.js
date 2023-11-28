@@ -5,6 +5,7 @@ import Cart from './Pages/Cart'
 import Profile from './Pages/Profile'
 import Search from './Pages/Search'
 import BobaHouse from './Pages/BobaHouse'
+import Homepage from './Pages/Homepage'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <Route path='/cart' element={<Cart/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path='/bobahouse' element={<BobaHouse/>} />
-        <Route path='/' element={<Search/>} />
+        <Route path='/shop' element={<Search/>} />
+        <Route path='/' element={<Homepage/>} />
       </Routes>
       </BrowserRouter>
 
