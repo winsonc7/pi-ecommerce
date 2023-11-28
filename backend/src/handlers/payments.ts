@@ -5,6 +5,8 @@ import "../types/session";
 
 export default function mountPaymentsEndpoints(router: Router) {
   // handle the incomplete payment
+  const inventoryRecord: Record<any, number> = {}; // once we create a unified order management system, we would remove these
+
   router.post("/incomplete", async (req, res) => {
     const payment = req.body.payment;
     const paymentId = payment.identifier;
@@ -80,6 +82,18 @@ export default function mountPaymentsEndpoints(router: Router) {
       implement your logic here 
       e.g. creating an order record, reserve an item if the quantity is limited, etc...
     */
+    const product_id = currentPayment.data.metadata.productId;
+    if (product_id in inventoryRecord) {
+      if (inventoryRecord[product_id] <= 0) {
+        // orderRecord is defined at the top of the file, not sure if that's right
+        return res.status(422).json({
+          // this https code might be wrong
+          error: "Insufficient Quantity",
+          message: "Item is out of stock",
+        });
+      }
+      inventoryRecord[product_id] -= 1; // remove an item from the inventory
+    } // if item not in order record, assume infinite capacity
 
     await orderCollection.insertOne({
       pi_payment_id: paymentId,
