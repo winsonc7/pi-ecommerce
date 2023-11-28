@@ -1,16 +1,10 @@
 import React from 'react';
-import './Cart.css';
-import { useCart } from './CartContext.jsx';
+import './Cart.css'; // Import the CSS file
 
 const Cart = ({ cart }) => {
   // Check if cart is defined
   if (!cart || !cart.length) {
-    return (
-      <div className="cart-container">
-        <h1 className="cart-header">Cart</h1>
-        <p className="empty-cart-message">Your cart is empty.</p>
-      </div>
-    );
+    return <p className="empty-cart-message">Your cart is empty.</p>;
   }
 
   // Calculate the total price
