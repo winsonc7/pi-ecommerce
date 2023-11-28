@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './BobaHouse.css';
-import backdrop from '../Components/Assets/shop_sign.png'
+import backdrop from '../Components/Assets/shop_sign.png';
 import all_product from '../Components/Assets/all_product';
+import { useCart } from './CartContext.jsx';
 
 const BobaHouse = () => {
   // State to keep track of the count of added items
   const [itemCounts, setItemCounts] = useState(all_product.map(() => 0));
 
   // State to manage the cart
-  const [setCart] = useState([]);
+  const [cart, setCart] = useState([]);
 
   // Function to handle adding an item
   const handleAddItem = (index) => {
@@ -16,8 +17,8 @@ const BobaHouse = () => {
     newCounts[index] += 1;
     setItemCounts(newCounts);
 
-    setCart((prevCart) => {
-      const updatedCart = [...prevCart];
+    setCart((cart) => {
+      const updatedCart = [...cart];
       const existingItemIndex = updatedCart.findIndex((item) => item.id === all_product[index].id);
 
       if (existingItemIndex !== -1) {
@@ -45,8 +46,8 @@ const BobaHouse = () => {
       newCounts[index] -= 1;
       setItemCounts(newCounts);
 
-      setCart((prevCart) => {
-        const updatedCart = [...prevCart];
+      setCart((cart) => {
+        const updatedCart = [...cart];
         const existingItemIndex = updatedCart.findIndex((item) => item.id === all_product[index].id);
 
         if (existingItemIndex !== -1) {
