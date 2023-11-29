@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import profile from '../Components/Assets/profile.png';
+import profile from '../Components/Assets/shop_sign.png';
 import './Profile.css';
 
-const Profile = () => {
+const BusinessProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
-  const [name, setName] = useState('Edward Cullen');
-  const [email, setEmail] = useState('notavampire@gmail.com');
-  const [phone, setPhone] = useState('123-456-7890');
+  const [name, setName] = useState('Boba House');
+  const [email, setEmail] = useState('weloveboba@gmail.com');
+  const [phone, setPhone] = useState('100-888-8888');
 
   const handleUpdateProfile = () => {
     setIsEditing(true);
@@ -46,11 +46,10 @@ const Profile = () => {
           <button className="button" onClick={handleUpdateProfile}>
             Update Profile
           </button>
-          <button className="button">Add Business</button>
         </>
       )}
     </div>
   );
 };
 
-export default Profile;
+export default BusinessProfile;

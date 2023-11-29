@@ -27,7 +27,7 @@ const Search = () => {
                 className="restaurant-image"
               ></div>
               <h2>{restaurant.name}</h2>
-              <Link to="/bobahouse">
+              <Link to="/c/bobahouse">
               <button>Order</button>
               </Link>
             </div>

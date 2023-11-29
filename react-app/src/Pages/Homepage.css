@@ -13,10 +13,6 @@ body {
   height: 100vh; /* Set the container height to the full viewport height */
 }
 
-h1 {
-  color: #333;
-}
-
 .homepage-buttons {
   display: flex;
   flex-direction: column; /* Stack buttons vertically */

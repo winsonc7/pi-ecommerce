@@ -4,10 +4,10 @@ import { Link, useLocation } from 'react-router-dom';
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/redcart.png'
 
-const Navbar = () => {
+const CustomerNavbar = () => {
   const location = useLocation();
 
-  const shouldRenderNavbar = location.pathname !== '/';
+  const shouldRenderNavbar = location.pathname.startsWith('/c');
 
   return shouldRenderNavbar ? (
     <div className='navbar'>
@@ -15,16 +15,17 @@ const Navbar = () => {
         <img src={logo} alt="" className="logo-image"/>
       </div>
       <div className="buttons">
-        <Link to="/shop"> <button>Search</button> </Link>
-        <Link to="/profile"> <button>My Profile</button> </Link>
-        <Link to="/cart">
+        <Link to="/c"> <button>Search</button> </Link>
+        <Link to="/c/profile"> <button>My Profile</button> </Link>
+        <Link to="/c/cart">
         <button>
           <img src={cart_icon} alt="Cart" className="cart-image"/>
         </button>
         </Link>
+        <Link to="/"> <button>Home</button> </Link>
       </div>
     </div>
   ) : null
 }
 
-export default Navbar
+export default CustomerNavbar

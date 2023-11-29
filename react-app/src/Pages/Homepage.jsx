@@ -6,8 +6,8 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="homepage-buttons">
-        <Link to="/shop"> <button>Log In As Customer</button> </Link>
-        <Link to="/shop"> <button>Log In As Business</button> </Link>
+        <Link to="/c"> <button>Log In As Customer</button> </Link>
+        <Link to="/b"> <button>Log In As Business</button> </Link>
       </div>
     </div>
   );
